@@ -12,40 +12,39 @@
 
 ## Quickstart Instructions
 
-Change into the `quickstart` directory
+1. Change into the `quickstart` directory
 
-copy `.env.example` to `.env` and replace with your access token
-```
-SQUARE_ACCESS_TOKEN=yourSandboxAccessToken
-```
+1. copy `.env.example` to `.env` and replace with your access token
+    ```
+    SQUARE_ACCESS_TOKEN=yourSandboxAccessToken
+    ```
 
-Create a virtual environment
-```
-$ python3 -m venv env
-```
+1. Create a virtual environment
+    ```
+    $ python3 -m venv env
+    ```
 
-Activate the environment
-```
-$ source env/bin/activate
-```
+1. Activate the environment
+    ```
+    $ source env/bin/activate
+    ```
 
-Install dependencies
-```
-$ pip3 install -r requirements.txt
-```
+1. Install dependencies
+    ```
+    $ pip3 install -r requirements.txt
+    ```
 
-Install the latest Square SDK
-```
-$ pip3 install squareup
-```
+1. Install the latest Square SDK
+    ```
+    $ pip3 install squareup
+    ```
 
-Run the code
-```
-$ python3 ./quickstart.py
-```
+1. Run the code
+    ```
+    $ python3 ./quickstart.py
+    ```
 
-You should see output similar to this in your console
-
-```
-LHJ1ZXP3YSV8X: Default Test Account, 1600 Pennsylvania Ave NW, Washington
-```
+1. You should see output similar to this in your console
+    ```
+    LHJ1ZXP3YSV8X: Default Test Account, 1600 Pennsylvania Ave NW, Washington
+    ```
