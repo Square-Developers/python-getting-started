@@ -1,2 +1,1 @@
-squareup==35.1.0.20240320
 python-dotenv==1.0.1
