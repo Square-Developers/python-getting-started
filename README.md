@@ -5,6 +5,10 @@
 
 [Python Quickstart Guide](https://developer.squareup.com/docs/sdks/python/quick-start) - The quickstart directory is based off of this document.
 
+[Pip repository for Square](https://pypi.org/project/squareup/) - Where the package files are hosted
+
+[Python SDK Source Code](https://github.com/square/square-python-sdk) - Github repo with sdk source code
+
 
 ## Quickstart Instructions
 
@@ -27,17 +31,21 @@ $ source env/bin/activate
 
 Install dependencies
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
-Set your Access Token in your Environment Variables
+Install the latest Square SDK
 ```
-$ export SQUARE_ACCESS_TOKEN=yourSandboxAccessToken
+$ pip3 install squareup
 ```
 
 Run the code
 ```
-$ python ./quickstart.py
+$ python3 ./quickstart.py
 ```
 
-You should see your `Square Sandbox Seller account's` location logged in the console.
+You should see output similar to this in your console
+
+```
+LHJ1ZXP3YSV8X: Default Test Account, 1600 Pennsylvania Ave NW, Washington
+```
