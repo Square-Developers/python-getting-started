@@ -35,6 +35,11 @@ The sample is based on the [Python SDK Quickstart guide](https://developer.squar
     $ pip3 install squareup
     ```
 
+1. [optional] Install the legacy Square SDK, to run the legacy quickstart
+    ```
+    $ pip3 install squareup_legacy
+    ```
+
 1. Run the code
     ```
     $ python3 ./quickstart.py

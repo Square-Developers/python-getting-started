@@ -1,27 +1,25 @@
-from square.http.auth.o_auth_2 import BearerAuthCredentials
-from square.client import Client
+from square import Square
+from square.environment import SquareEnvironment
+from square.core.api_error import ApiError
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-client = Client(
-    bearer_auth_credentials=BearerAuthCredentials(
-        access_token=os.environ['SQUARE_ACCESS_TOKEN']
-    ),
-    environment='sandbox')
+client = Square(
+    environment=SquareEnvironment.SANDBOX,
+    token=os.environ['SQUARE_ACCESS_TOKEN']
+)
 
-result = client.locations.list_locations()
+try:
+    response = client.locations.list()
+    for location in response.locations:
+        print(f"{location.id}: ", end="")
+        print(f"{location.name}, ", end="")
+        print(f"{location.address}, ", end="")
 
-if result.is_success():
-    for location in result.body['locations']:
-        print(f"{location['id']}: ", end="")
-        print(f"{location['name']}, ", end="")
-        print(f"{location['address']['address_line_1']}, ", end="")
-        print(f"{location['address']['locality']}")
-
-elif result.is_error():
-    for error in result.errors:
-        print(error['category'])
-        print(error['code'])
-        print(error['detail'])
+except ApiError as e:
+    for error in e.errors:
+        print(error.category)
+        print(error.code)
+        print(error.detail)
